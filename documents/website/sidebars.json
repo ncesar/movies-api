@@ -1,0 +1,8 @@
+{
+  "docs": {
+    "Introduction": ["doc1"],
+    "Additional informations": ["doc2"],
+    "Components": ["doc3"],
+    "Conclusion": ["doc4"]
+  }
+}

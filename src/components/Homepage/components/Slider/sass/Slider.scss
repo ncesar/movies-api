@@ -1,0 +1,11 @@
+.slider {
+    display: flex;
+
+    .carousel-slider {
+        width: 37%!important;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+}

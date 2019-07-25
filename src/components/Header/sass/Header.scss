@@ -1,0 +1,139 @@
+$background_color_1: #fff;
+$background_color_2: #f4f4f4;
+
+/* menu */
+/* menu icon */
+/* menu btn */
+/* 48em = 768px */
+.header {
+	background-color: $background_color_1;
+    box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.19);
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    height: 70px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+	margin-top: 5px;
+	a {
+		font-family: 'Roboto';
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		background-color: $background_color_1;
+	}
+	li {
+		a {
+			display: block;
+			color: #7d7e7e;
+			padding: 20px 20px;
+			border-right: 1px solid #f4f4f4;
+			text-decoration: none;
+			font-family: 'Roboto';
+			&:hover {
+				background-color: $background_color_2;
+			}
+		}
+	}
+	.menu-btn {
+		&:hover {
+			background-color: $background_color_2;
+		}
+		display: none;
+		&:checked {
+			&~.menu {
+				max-height: 240px;
+			}
+			&~.menu-icon {
+				.navicon {
+					background: transparent;
+					&:before {
+						transform: rotate(-45deg);
+					}
+					&:after {
+						transform: rotate(45deg);
+					}
+				}
+				&:not(.steps) {
+					.navicon {
+						&:before {
+							top: 0;
+						}
+						&:after {
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		display: block;
+		float: left;
+		font-size: 2em;
+		padding: 10px 20px;
+		text-decoration: none;
+	}
+	.menu {
+		clear: both;
+		max-height: 0;
+		transition: max-height .2s ease-out;
+	}
+	.menu-icon {
+		cursor: pointer;
+		display: inline-block;
+		float: right;
+		padding: 28px 20px;
+		position: relative;
+		user-select: none;
+		.navicon {
+			background: #333;
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background .2s ease-out;
+			width: 18px;
+			&:before {
+				background: #333;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all .2s ease-out;
+				width: 100%;
+				top: 5px;
+			}
+			&:after {
+				background: #333;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all .2s ease-out;
+				width: 100%;
+				top: -5px;
+			}
+		}
+	}
+}
+@media (min-width: 48em) {
+	.header {
+		li {
+			float: left;
+			a {
+				padding: 20px 30px;
+			}
+		}
+		.menu {
+			clear: none;
+			float: right;
+			max-height: none;
+		}
+		.menu-icon {
+			display: none;
+		}
+	}
+}
