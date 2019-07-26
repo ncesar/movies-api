@@ -22,7 +22,6 @@ class MovieList extends React.Component {
       .then(res => res.data)
       .then(res => {
         this.setState({ movieData: res });
-        console.log(res);
       });
     axios
       .get(
