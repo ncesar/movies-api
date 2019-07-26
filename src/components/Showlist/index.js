@@ -36,7 +36,6 @@ class Showlist extends Component {
         this.setState({
           moviesList,
         });
-        console.log(moviesList);
       });
   };
 
